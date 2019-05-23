@@ -1,3 +1,3 @@
-# Project 0
+# html-css-website
 
-Web Programming with Python and JavaScript
+Simple website made using only css, sass, html, and bootsrap. Made for project0 of cs50 Web.
