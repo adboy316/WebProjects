@@ -1,0 +1,68 @@
+.table .table-head {
+  background-color: lightgreen;
+}
+.table .table-row {
+  background-color: #d6f7d6;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.jumbotron {
+  margin-bottom: 0;
+  background-color: lightgray;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+  font: Helvetica, sans-serif;
+  color: green;
+}
+
+.jumbotron .container {
+  max-width: auto;
+}
+
+footer, .jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p, .jumbotron p {
+  margin-bottom: 0.25rem;
+}
+
+.front_page_dinoimages {
+  max-width: 100%;
+  height: auto;
+}
+
+.album .py-5 .bg-light {
+  height: 100%;
+}
+
+.btn-primary {
+  background-color: darkgreen;
+}
+
+#tablecontainer {
+  padding: 15px;
+}
+
+#exampleInputEmail1 {
+  width: 30%;
+}
+
+#exampleInputMessage {
+  height: 200px;
+  text-align: left;
+}
+
+/*# sourceMappingURL=style.css.map */
