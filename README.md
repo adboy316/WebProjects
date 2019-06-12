@@ -1,7 +1,4 @@
 # Project 1
-
-Web Programming with Python and JavaScript
-
 This is a very basic cataloging website that allows users to search for books in a database and post reviews. It was designed with Python, Flask, Postgres, SQLAlchemy, HTML, and CSS. 
 
 The tables.sql file contains all the tables that were created for the project. 
