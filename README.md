@@ -6,3 +6,5 @@ The tables.sql file contains all the tables that were created for the project.
 The imports.py script has a short script for importaing books from a books.csv file, which contains a list of books. 
 
 The templates folder contains all the html used in this project, and the static folder has all the css. 
+
+https://youtu.be/rI1nmH1QbPA
