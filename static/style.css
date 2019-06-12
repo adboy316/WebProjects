@@ -1,0 +1,256 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+
+html {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  min-height: 100%;
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.fa.fa-star, .fa.fa-star-half-o {
+  font-size: 15px;
+}
+
+.userreviews {
+  font-size: 15px;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.greeting{
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding-left: 90px;
+}
+
+.searchform {
+  margin-top: 30%;
+}
+
+.flashes {
+  padding-left: 190px;
+}
+
+.btn.btn-outline-warning.btn-rounded{
+  margin-left: 2px;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.wrapperresults {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapperresults {
+  display: grid;
+  padding: 40px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+}
+
+.panel {
+  /* needed for the flex layout*/
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1 1 200px;
+}
+
+.wrapperresults > * {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  margin-bottom: 10px;
+}
+
+/* no grid support? */
+.sidebar {
+  float: left;
+  width: 19.1489%;
+}
+
+.content {
+  float: right;
+  width: 79.7872%;
+}
+
+/* make a grid */
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+  margin-top: 40px;
+}
+
+.wrapper > * {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+.header, .footer {
+  grid-column: 1 / -1;
+  /* needed for the floated layout */
+  clear: both;
+}
+
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.loginscreen{
+  margin-top: 15%;
+}
+
+
+
+
+
+

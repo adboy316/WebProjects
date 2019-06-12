@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!--Took ratings themes from - https://bootsnipp.com/snippets/vlgV6-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<div class="wrapper">
+    <header class="header">{{ book.title }}
+        <h6>by {{ book.author }}</h6>
+        <h6>published in {{ book.year }}</h6>
+        <h6>isbn {{ book.isbn }}</h6>
+    </header>
+    <aside class="sidebar">
+
+        <div class="card-body">
+            <h1 class="text-danger">{{ res['books'][0]["average_rating"] }}</h1>
+            <div class="sub-row text-warning">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                    class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+            </div>
+            <p>{{ res['books'][0]['work_text_reviews_count'] }} Ratings</p>
+        </div>
+    </aside>
+
+    <article class="content">
+
+        <div class="card-body">
+            <i class="fa fa-pencil-square fa-3x text-success"></i>
+            <a href="#reviewbook" <h4>Write Your Views</h4>
+            </a>
+            <p>What did you think about this book?</p>
+
+        </div>
+
+    </article>
+    <footer class="footer">User Reviews
+
+        {% for review in bookreviews %}
+        <div class="one-review">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>{{review.username}}</p>
+                </div>
+                
+            </div>
+            <div class="row text-success">
+                <div class="col-md-12">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+            </div>
+            <div class="row pt-2">
+                <div class="col-md-12">
+                    <h6>{{ review.reviewtitle }}</h6>
+                    <p class="userreviews">{{ review.review}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+    </footer>
+</div>
+
+
+
+<div class="container" style="padding:24px">
+    <a name="reviewbook"></a>
+    {% if reviewed %}
+    <li>You have reviewed {{ book.title }}. Thank you.</li>
+    {{ reviewed.isbn}}
+    {% else %}
+    <h4>Please leave a review.</h4>
+    <form action="{{ url_for('bookpage', isbn = book.isbn) }}" method="post">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Rate the book</label>
+            <select class="form-control" name="rating" id="exampleFormControlSelect1">
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Okay</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+        </div>
+
+        Review Title
+        <input class="form-control" name="reviewtitle" type="text" required>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">What did you think about the book?</label>
+            <textarea class="form-control" name="review" id="exampleFormControlTextarea1" rows="3" required></textarea>
+
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit Review</button>
+</div>
+
+
+
+</form>
+{% endif %}
+
+<!-- Search form -->
+<h4>Search for more books</h4>
+<form class="form-inline md-form mr-auto mb-4" action="{{ url_for('search_results') }}" method="post">
+    <input class="form-control ml-3 w-75" type="text" name="query" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-warning btn-rounded" type="submit">Search</button>
+</form>
+
+
+{% endblock %}

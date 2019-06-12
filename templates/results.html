@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="wrapperresults">
+        
+        {% for book in search_results %}
+        <div class="panel">  <a href="{{ url_for('bookpage', isbn = book.isbn) }}">
+                {{ book.title }} 
+            </a>
+            
+            
+        </div>
+        {% endfor %}
+        
+      </div>
+{% endblock %}
